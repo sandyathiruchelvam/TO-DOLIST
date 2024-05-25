@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>ToDo List</h2><br>
+        <input id="input" placeholder="Enter new task.....">
+        <button onclick="add()" class="add-btn">
+            <img src="plus.png" class="icon-add">
+        </button>
+        <ul id="container"></ul>
+    </div>
+
+    <script>
+        // References to input field and the container where tasks will be added
+        var input = document.getElementById("input");
+        var container = document.getElementById("container");
+
+        function add() {
+            // Create new list item for the task
+            var listitems = document.createElement("li");
+            listitems.textContent = input.value;
+
+            // Create complete button and icon
+            var complete = document.createElement("button");
+            var completeIcon = document.createElement("img");
+            complete.className = "complete-btn";
+            completeIcon.src = "check.png";
+            completeIcon.alt = "Complete";
+            complete.appendChild(completeIcon);
+
+            // Toggle strikethrough on the task when complete button is clicked
+            complete.onclick = function() {
+                listitems.classList.toggle("strikethrough");
+            };
+
+            // Create delete button and icon
+            var del = document.createElement("button");
+            var deleteIcon = document.createElement("img");
+            del.className = "icon-delete";
+            deleteIcon.src = "trash-bin.png";
+            deleteIcon.alt = "Delete";
+            del.appendChild(deleteIcon);
+
+            // Remove task from the list when delete button is clicked
+            del.onclick = function() {
+                listitems.remove();
+            };
+
+            // Append buttons to the list item
+            listitems.appendChild(complete);
+            listitems.appendChild(del);
+
+            // Append the new list item to the task container
+            container.appendChild(listitems);
+
+            // Clear the input field
+            input.value = "";
+        }
+    </script>
+</body>
+</html>

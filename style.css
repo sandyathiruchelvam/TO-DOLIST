@@ -1,0 +1,130 @@
+/* Style for the body of the document */
+body {
+    text-align: center;
+    margin-top: 10%;
+    background-image: url('bg-img.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/* Style for the heading */
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: black;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 0%; /* Remove margin */
+}
+
+/* Style for the main container */
+.container {
+    width: 800px; /* Fixed width */
+    height: 400px; /* Fixed height */
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.90); /* Drop shadow */
+    margin: 5px auto; /* Center the box horizontally */
+    background-image: url('container-img.jpg');
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the image */
+    border-radius: 10px;
+    overflow-y: auto; /* Add vertical scrolling */
+}
+
+/* Style for the input field */
+input {
+    padding: 10px;
+    width: 80%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    border-color: #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.90); /* Drop shadow */
+    border-radius: 5px;
+    height: 15px;
+}
+
+/* Style for the unordered list */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Style for list items */
+li {
+    padding: 3px;
+    border-bottom: 1px solid #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    font-weight: 700; /* Bold weight for Poppins */
+    margin-top: 15px;
+    width: 100%; /* Ensure li takes the full width of the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Style for the add button */
+.add-btn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 40px;
+    width: 40px;
+    margin-left: 30px;
+    border-radius: 5px;
+    margin-left: 10px; /* Ensure spacing between buttons */
+}
+
+/* Style for the delete button */
+.icon-delete {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    margin-left: 10px; /* Ensure spacing between buttons */
+}
+
+/* Style for the complete button */
+.complete-btn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    margin-left: 65%;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: rgb(133, 132, 132);
+}
+
+/* Style for icons */
+.icon-add,
+.icon-delete img,
+.complete-btn img {
+    width: 15px; /* Set the width of the icon */
+    height: 15px; /* Set the height of the icon */
+    color: white;
+}
+
+/* Style for completed tasks */
+.strikethrough {
+    text-decoration: line-through;
+    color: white;
+}
